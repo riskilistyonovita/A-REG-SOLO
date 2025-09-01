@@ -31,8 +31,8 @@ logging.basicConfig(
 def get_services():
     """Inisialisasi Google Sheets dan Drive API"""
     try:
-        creds = service_account.Credentials.from_service_account_file(
-            "credentials.json",
+        creds = service_account.Credentials.from_service_account_info(
+    json.loads(st.secrets["GOOGLE_CREDENTIALS"]),
             scopes=[
                 "https://www.googleapis.com/auth/drive",
                 "https://www.googleapis.com/auth/spreadsheets",
@@ -418,3 +418,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
