@@ -146,7 +146,7 @@ def login():
     )
 
     st.markdown("<div class='login-box'>", unsafe_allow_html=True)
-    st.markdown("<div class='login-title'>🔐 Masuk ke Sistem</div>", unsafe_allow_html=True)
+    st.markdown("<div class='login-title'>🔐 A-REG SOLO</div>", unsafe_allow_html=True)
 
     role = st.radio("Pilih Akses:", ["Pengunjung", "Admin"], horizontal=True)
     password = st.text_input("Password:", type="password")
@@ -419,5 +419,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
